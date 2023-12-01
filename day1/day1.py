@@ -1,5 +1,5 @@
 
-lines = ""
+lines = []
 with open("day1/day1.txt", 'r') as f:
     lines = f.readlines()
 
@@ -10,9 +10,9 @@ for l in lines:
     for c in l:
         if c.isdigit():
             if first == -1:
-                first = str(c)
-                last = str(c)
+                first = c
+                last = c
             else:
-                last = str(c)
+                last = c
     sum += int(str(first)+str(last))
 print(sum)
