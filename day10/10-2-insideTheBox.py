@@ -49,12 +49,12 @@ for i in range(len(lines)):
 
 sum = 0
 for l in range(len(tiles)):
-    inLoop = False
+    insideLoop = False
     for t in range(len(tiles[l])):
         tilePos = [l, t]
         if tiles[l][t] in "|LJ" and tilePos in loop:
-            inLoop = not inLoop
+            insideLoop = not insideLoop
         else:
-            if inLoop and [l, t] not in loop:
+            if insideLoop and [l, t] not in loop:
                 sum += 1
 print(sum)

@@ -33,14 +33,10 @@ checked = []
 checking = [Spos]
 while True:
     breakout = False
-
     checking2 = checking.copy()
     checking = []
-    #print()
-    #print(checking2)
     for c in checking2:
         checked.append(c)
-        #print(tiles[c[0]][c[1]][0], tiles[c[0]][c[1]][1])
         if (tiles[c[0]][c[1]][1] in checked or tiles[c[0]][c[1]][1] in checking) and (tiles[c[0]][c[1]][0] in checked or tiles[c[0]][c[1]][0] in checking):
             breakout = True
             break
@@ -52,5 +48,5 @@ while True:
     if breakout:
         break
     maxes += 1
-    #print(maxes)
+
 print(maxes)
